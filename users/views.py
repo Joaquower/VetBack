@@ -6,7 +6,8 @@ from django.contrib.auth import authenticate, login, logout
 from .models import User
 from .serializers import UserSerializer, UserRegistrationSerializer
 
-# Create your views here.
+# aqui va la view sensual
+#Endpoints codigifacots sin codificar
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
