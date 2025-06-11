@@ -13,12 +13,12 @@ class AppointmentSerializer(serializers.ModelSerializer):
     vet = UserSerializer(read_only=True)
     service = ServiceSerializer(read_only=True)
     client_id = serializers.PrimaryKeyRelatedField(
-        queryset=User.objects.filter(is_vet=False),
+        queryset=User.objects.all(),
         source='client',
         write_only=True
     )
     vet_id = serializers.PrimaryKeyRelatedField(
-        queryset=User.objects.filter(is_vet=True),
+        queryset=User.objects.all(),
         source='vet',
         write_only=True
     )
